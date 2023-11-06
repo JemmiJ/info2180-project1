@@ -1,26 +1,186 @@
 /* Add your CSS to this file */
+:root {
+    --defaultFontFamily: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+    --defaultFontSize: 18px;
+}
 body {
     margin: 0;
     font-size: 16px;
-    display:grid;
-    grid-template-columns: 90% 10%;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
-    display:flex;
 }
-h1 {
-    text-align: left;
+header div.container{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    font-size: var(--defaultFontSize);
 }
-/*nav{
-    text-align: right;
-    
-}*/
+li {
+    display: inline;
+    float: left;
+
+}
+li a{
+    display: block;
+    text-align: center;
+    padding:14px 16px;
+    color:#6b7280;
+}
 ul{
-    list-style: none;
+    list-style-type: none;
     margin:0;
     padding:0;
+    overflow: hidden;
+}
+li a:hover {
+    color:#5A67D8;
+}
+.overview-hero {
+    display: flex;
+    margin:8px;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E2E8F0;
+    font-size: 16px;
+}
+.overview-hero div.container div.overview-hero-image img {
+    width:20%;
+    height:20%;
+    padding:0;
+    margin:0 10px 5px 0;
+}
+.overview-hero div.container div.overview-hero-text {
+    text-wrap: wrap;
+}
+.learn-about div.container div.cards {
+    display:grid;
+    grid-template-columns: 20% 20% 20%;
+    justify-content: space-between;
+    align-content: center;
+    margin:8px;
+}
+.learn-about div.container div.cards div.card {
+    border: 5px solid #E2E8F0;
+}
+.learn-about div.container div.cards div.card img {
+    height: 50%;
+    width: 50%;
+}
+.learn-about div.container div.cards div.card div.card-body {
+    text-wrap:wrap;
+}
+.learn-about div.container h2 {
+    font-size: 24px;
+    color: #48BB78;
+}
+.learn-about div.container div.cards div.card div.card-body h3 {
+    font-size: 21px;
+    color: #48BB78;
+}
+.testing{
+    background-color: #4A5568;
+}
+.testing div.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-top: 5px;
+}
+.testing div.container div.testing-desciption {
+    grid-column: 1;
+    padding:16px;
+    color: white;
+}
+.testing div.container div.cta {
+    grid-column: 2;
+    color:white;
+}
+.testing div.container div.cta a.btn {
+    background-color: #48BB78;
+}
+.stories div.container article {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    margin: 4px;
+}
+.stories div.container article img {
+    float: left;
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+}
+.stories div.container article div.article-body {
+    width:60%;
+    float: right;
+    margin-right:5%;
+    text-wrap:wrap;
+    padding:16px;
+   
+}
+.stories div.container article div.article-body h3 {
+    font-size: var(--defaultFontSize);
+}
+.newsletter{
+    background-color:#48BB78;
+}
+.newsletter div.container h3 {
+    text-align: center;
+}
+.newsletter div.container p{
+    text-align: center;
+}
+.newsletter div.container form{
+    align-items: center;
+    margin: 0.4rem 2rem;
+}
+.newsletter div.container form div.form-group {
+    display: flex;
+    margin: 5px;
+}
+.newsletter div.container form div.form-group #email {
+    padding: 10px;
+    display: inline-block;
+    margin-right:10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100px;
+    position: absolute;
+    transform: translateY(10%);
+    right: 46%;
+}
+.newsletter div.container form button {
+    text-decoration: none;
+    color: white;
+    background-color: #5A67D8;
+    display:inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(10%);
+    right:39%;
+}
+.message.emailentered{
+    color:#4A5568;
+    display:inline-block;
+}
+.message.noemail{
+    color:#4A5568;
+    display:inline-block;
+}
+footer {
+    background-color: #4A5568;
+    color: white;
+    padding: 10px;
 }
